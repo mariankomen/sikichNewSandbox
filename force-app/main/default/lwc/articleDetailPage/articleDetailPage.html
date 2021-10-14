@@ -1,0 +1,51 @@
+<template>
+    <div class="ADP_main">
+        <template for:each={data} for:item="i">
+            <div key={i.Id}>
+                <div class="ADP_subheader">
+                    New to talis one
+                </div>
+                <div class="ADP_gentitle">
+                    <p>{i.Title}</p>
+                </div>
+                <div class="ADP_summary">
+                    <lightning-formatted-rich-text
+                        value={i.Summary}
+                    ></lightning-formatted-rich-text> 
+                </div>
+            </div>
+        </template>
+
+
+        <div>
+            <!-- DIV FOR AD-->
+                <c-dynamic-ads-component value={urlNameOfArticle}></c-dynamic-ads-component> 
+        </div>
+
+         
+
+    </div>
+    <div class="ADP_categoryTags d-flex">
+
+        <template for:each={categoryTags} for:item="i">
+            <div class="ADP_category_Item" key={i}>
+                {i}
+            </div>
+        </template>
+        
+    </div>
+    <div class="ADP_helpful">
+        <div>
+            <p>Was this article helpful?</p>
+        </div>
+        <div class="d-flex">
+            <!-- <div class="ADP_helpful_item" data-id="voteYES" onclick={voteYes}> -->
+            <div class={styleYesVoted} data-id="voteYES" onclick={voteYes}>
+                <p>Yes</p>
+            </div>
+            <div class={styleNoVoted} data-id="voteNO" onclick={voteNo}>
+                <p>No</p>
+            </div>
+        </div>
+    </div> 
+</template>

@@ -1,0 +1,6 @@
+<apex:page standardController="Opportunity" renderAs="pdf">
+<!--
+Steps:
+
+-->
+</apex:page>

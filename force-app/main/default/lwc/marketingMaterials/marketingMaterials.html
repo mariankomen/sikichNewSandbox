@@ -1,0 +1,41 @@
+<template>
+    <div class="SU_main">
+        <div class="SU_img">
+            <!-- <img src={O_header}/> -->
+            <img src={topicDetails.imgUrl}/>
+        </div>
+        <div class="SU_Title">
+            <p>{topicDetails.title}</p>
+        </div>
+        <div class="SU_description">
+            <p>
+               {topicDetails.desc}
+            </p>
+        </div>
+
+        <div class="SU_updates_list_title">
+            <p>All marketing materials</p>
+        </div>
+        <div class="SU_updates_list">
+            <ul>
+                <template for:each={relatedArticles} for:item='i'>
+                    <li key={i.id}><a href={i.url}>{i.title}</a></li>
+                </template>
+                
+                
+                
+            </ul>
+        </div>
+
+        <div style="width: 100%; align-items:center; display: flex; justify-content: center;">
+            <template if:true={loadedAll}>
+                <div class='SU_btn_loadmore' style="padding: 6px 16px;" onclick={loadMore}>
+                    LOAD MORE
+                </div>
+            </template>
+        </div>
+
+    </div>
+
+
+</template>

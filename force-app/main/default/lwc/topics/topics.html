@@ -1,0 +1,23 @@
+<template>
+    <div class="T_head d-flex-jsc colorWhite align-c">
+        <p>Topics</p>
+    </div>
+
+    <div class="T_content d-flex fl-wrap d-flex-btw">
+        <template for:each={generalData} for:item="i">
+            <div class="T_item d-flex d-flex-fd-col " key={i.topicDetail.id}>
+                <div class="T_item_img_box">
+                    <img src={i.topicDetail.img} alt=""/>
+                </div>
+                <div class="T_item_title_box">
+                    <a href={i.topicDetail.urlName}>{i.topicDetail.title}</a>
+                </div>
+                <ul>
+                    <template for:each={i.articleDetail} for:item="item">
+                        <li key={item.Title}> <a href={item.UrlName}>{item.Title}</a></li>
+                    </template>
+                </ul>    
+            </div>
+        </template>
+    </div>
+</template>

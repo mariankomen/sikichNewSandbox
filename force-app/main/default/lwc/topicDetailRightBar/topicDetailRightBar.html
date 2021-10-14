@@ -1,0 +1,23 @@
+<template>
+    <div class="TRB_main">
+        <template for:each={generalData} for:item="i">
+            <div class="TRB_topic_title" key={i.topicDetail.id}>
+                <a href={i.topicDetail.urlName}>
+                    {i.topicDetail.title}
+                </a>
+
+            </div>
+            <div class="TRB_related_ar" key={i.topicDetail.id}>
+                <ul>
+                    <template for:each={i.articleDetail} for:item="item">
+                        <li key={item.Title}> <a href={item.UrlName}>{item.Title}</a></li>
+                    </template>
+                   
+                </ul>
+            </div>
+
+        </template>
+        
+        
+    </div>
+</template>

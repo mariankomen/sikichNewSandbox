@@ -1,0 +1,89 @@
+<template>
+    <div class="CC_main d-flex">
+        <div class="CC_leftbar">
+            <img src={CaseIcon}/>
+        </div>
+        <div class="CC_rightbar ">
+            <div class="ADP_subheader">
+                New Case
+            </div>
+            <div class="ADP_gentitle">
+                <p>How can we help?</p>
+            </div>
+            <!-- <div class="CC_picklist CC_input" >
+                <lightning-combobox name="filter"
+                                    value={PicklistValue}
+                                    label="Case Issue"
+                                    options={pickListOptions}
+                                    onchange={handlePicklistChange}
+                                    placeholder="Select "
+                                    >
+                </lightning-combobox>
+            </div> -->
+
+            <div class="CC_input">
+                <lightning-input type="text"
+                                 value={InputNameValue}
+                                 name="nameInput"
+                                 label="Name *"
+                                 onchange={handleNameChange}
+                ></lightning-input>
+            </div>
+            <div class="CC_input">
+                <lightning-input type="email"
+                                 value={InputEmailValue}
+                                 name="emailInput"
+                                 label="Email"
+                                 onchange={handleEmailChange}
+                ></lightning-input>
+            </div>
+            <div class="CC_input">
+                <lightning-input type="text"
+                                 value={InputOrganizationValue}
+                                 name="organizationInput"
+                                 label="Organization"
+                                 onchange={handleOrganizationChange}
+                ></lightning-input>
+            </div>
+            <div class="CC_input">
+                <lightning-input type="text"
+                                 value={InputSerialNumberValue}
+                                 name="organizationInput"
+                                 label="Serial Number"
+                                 onchange={handleSerialNumberChange}
+                ></lightning-input>
+            </div>
+            <div class="CC_input">
+                <lightning-textarea name="input1"
+                                    value={InputMessageValue}
+                                    label="Message"
+                                    onchange={handleMessageChange}
+                ></lightning-textarea>
+            </div>
+            <div class="CC_input">
+                <lightning-file-upload  label="Attachment"
+                                        name="fileUploader"
+                                        accept={acceptedFormats}
+                                        onuploadfinished={handleUploadFinished}
+                                        multiple>
+                </lightning-file-upload>
+                <template if:true={areUploadedFiles}>
+                    <ul>
+
+                        <template for:each={data} for:item="i">
+                            <li key={i.Id}><a href={i.attributes.url}>{i.ContentDocument.Title}.{i.ContentDocument.FileExtension}</a></li>
+                        </template>
+                    </ul>
+
+                </template>
+
+            </div>
+            <div>
+                <div class="CC_btn" onclick={createCase}>
+                    Submit
+
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

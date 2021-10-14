@@ -1,0 +1,247 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,force:hasRecordId" access="global" controller="CaseRecordController">
+    <aura:attribute name="recordId" type="String" access="global" />
+    <aura:attribute name="popup" type="Boolean"/>
+    <aura:attribute name="case" type="Case"/>
+    <aura:attribute name="chatters" type="Object[]"/>
+    <aura:attribute name="attachments" type="String[]"/>
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
+    <!-- 'fileName' attribute for display the selected file name -->
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+    <aura:handler event="forceChatter:postCreated" action="{!c.handlePostCreated}"/>
+
+    <ltng:require
+            styles="{!$Resource.communityStyle  }"
+    />
+
+    
+    <div style="width: 700px;
+                margin: 10px;
+                margin-top: 80px;
+                border: 1px solid black;
+                height: auto;">
+
+        <div class="CASE_HEADER">
+            <div class="CASE_HEADER_BODY">
+                 CASE DETAIL
+            </div>
+        </div>
+        <div class="CASE_INTERNAL">
+            <div class="CASE_ID">Subject: {!v.case.Subject} </div>
+            <div class="CASE_ELEMENT">CASE ID: {!v.case.CaseNumber} </div>
+            <div class="CASE_ELEMENT"> Status: {!v.case.External_Status__c}</div>
+        </div>
+    </div>
+    <div style=" width: 700px;
+            margin: 10px;
+            border: 1px solid black;
+            height: auto;
+            margin-top: 40px;
+            padding-bottom: 50px;
+            ">
+        <div class="CASE_HEADER">
+            <div class="CASE_HEADER_BODY">
+                CASE INFORMATION
+            </div>
+        </div>
+
+        <div style="height: auto;">
+            <div style="font-size: 16px;
+                        font-family: 'Museo Sans 300';
+                        padding: 40px 20px;
+                        color: #414665;
+                        line-height: 32px;">
+                    {!v.case.Description}
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div style="width: 700px;
+                margin: 10px;
+                border: 1px solid black;
+                height: auto;
+                margin-top: 40px;">
+        <div class="CASE_HEADER">
+            <div class="CASE_HEADER_BODY">
+                ATTACHMENT
+            </div>
+        </div>
+    <div style="width: 100%;
+                line-height: 29px;
+                background-color: #fff;
+                align-items:flex-start;
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                font-family: 'Museo Sans 300';
+                color: #414665;
+                font-size: 16px;
+                padding: 40px 20px;">
+            <p style="padding: 0 0 15px 0;">
+                Attachment
+            </p>
+
+            <lightning:input aura:id="fileId"
+                            onchange="{!c.handleFilesChange}"
+                            type="file"
+                            name="file"
+                            label="Upload Attachment"
+                            multiple="true"
+                            accept="image/png, image/jpeg,.doc,.docx,.pdf"/>
+
+            <aura:if isTrue="{!v.showLoadingSpinner}">
+                <div class="slds-text-body_small slds-text-color_error">
+                    Uploading...
+                    <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+                </div>
+            </aura:if>
+
+            <br/>
+            <aura:iteration items="{!v.attachments}" var="attachment">
+                <div >{!attachment}
+                    <br/>
+                </div>
+            </aura:iteration>
+            </div>
+        </div>
+
+        <div style="width: 700px;
+                    margin: 10px;
+                    border: 1px solid black;
+                    height: auto;
+                    margin-top: 40px;">
+            <div class="CASE_HEADER">
+                <div class="CASE_HEADER_BODY">
+                    COMMENTS
+                </div>
+            </div>
+
+            <!-- <aura:iteration items="{!v.chatters}" var="chatter">
+                <div>
+                    <div style="width: 100%;
+                                line-height: 29px;
+                                background-color: #fff;
+                                align-items:flex-start;
+                                display: flex;
+                                flex-direction:column;
+                                justify-content: center;
+                                font-family: 'Museo Sans 300';
+                                color: #414665;
+                                font-size: 16px;
+                                padding-left: 20px;
+                                padding-top: 20px;
+                                padding-bottom: 10px;
+                                padding-right: 20px;">
+
+                        <div style="padding: 16px 30px;
+                                    background-color: #F2F3F7;
+                                    width: 100%;
+                                    display:flex;
+                                    flex-direction: column;
+                                    ">
+                            <div style="font-family: 'Museo Sans 700';
+                                        color: #414665;
+                                        font-size: 16px;">
+                                <lightning:formattedRichText value="{!chatter.commentBody}"/>
+                            </div>
+
+                            <div style="font-family: 'Museo Sans 300';
+                            color:#414665;">
+                                <span>By   {!chatter.Username}</span>
+                                <span> on  {!chatter.commentDate}</span>
+
+                                <aura:iteration items="{!chatter.comments}" var="chat">
+
+                                        <div style="width: 100%;
+                                                    line-height: 29px;
+                                                    background-color: #fff;
+                                                    align-items:flex-start;
+                                                    display: flex;
+                                                    flex-direction:column;
+                                                    justify-content: center;
+                                                    font-family: 'Museo Sans 300';
+                                                    color: #414665;
+                                                    font-size: 16px;">
+                                            <div style="padding: 16px 30px;
+                                                        background-color: #F2F3F7;
+                                                        width: 100%;
+                                                        display:flex;
+                                                        flex-direction: column;">
+                                                <div style="font-family: 'Museo Sans 700';
+                                                            color: #414665;
+                                                            font-size: 16px;">
+                                                    <lightning:formattedRichText value="{!chat.CommentBody}"/>
+                                                </div>
+                                                <div style="font-family: 'Museo Sans 300';
+                                                            color:#414665;">
+                                                    <span>By   {!chat.Username}</span>
+                                                    <span> on  {!chat.CreatedDate}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </aura:iteration>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:iteration> -->
+            <forceChatter:feed  type="record"  subjectId="{!v.recordId}" />
+            <div class="CASE_CD_btn" style="margin-top: 40px;"  onclick="{!c.clickHandler}"  data-id="openDiv" aura:id="openDiv">
+                NEW Comment
+            </div>
+        </div>
+
+
+        <aura:if isTrue="{!v.popup}">
+            <!-- Modal/Popup Box LWC starts here -->
+            <section    role="dialog" 
+                        tabindex="-1"
+                        aura:id="popup"
+                        aria-labelledby="modal-heading-01"
+                        aria-modal="true" 
+                        aria-describedby="modal-content-id-1"
+                        class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" >
+                    <div style="width: 700px;
+                                max-height: 500px;
+                                height: 400px;">
+                        <div class="CASE_HEADER">
+                            <div class="CASE_HEADER_BODY">
+                                New Comment
+                            </div>
+                        </div>
+                        <div style="height: auto; background: white;">
+                            <div style="font-size: 16px;
+                                        font-family: 'Museo Sans 300';
+                                        padding: 40px 20px;
+                                        color: #414665;
+                                        line-height: 32px;">
+                                    <div data-id="chatterId">
+                                        <forceChatter:publisher context="RECORD" recordId="{!v.recordId}" aura:id="richtext"/>
+                                    </div>
+                            </div>
+                            <div style="display: inline-flex;">
+                                <div class="CASE_CD_btn" style="margin-top: 40px;
+                                            margin-left: 25px;
+                                            margin-bottom: 10px;" 
+                                    data-id="closeDiv"
+                                    aura:id="closeDiv" 
+                                    onclick="{!c.closeWindow}">
+                                    Close
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- Modal/Popup Box LWC header here -->
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" aura:id="backg"></div>
+        </aura:if>
+</aura:component>

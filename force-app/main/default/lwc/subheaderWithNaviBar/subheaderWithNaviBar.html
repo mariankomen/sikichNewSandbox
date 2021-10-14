@@ -1,0 +1,9 @@
+<template>
+    <div class="subnav_main">
+        <template for:each={iterData} for:item="i">
+            <a href={i.url} key={i.key}>
+                {i.key}
+            </a>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,91 @@
+<template>
+
+    <div class="T_head d-flex-jsc colorWhite align-c">
+        <p>{bigTitle}</p>
+    </div>
+    <div class="d-flex" style="width: 100%;">
+        <!-- Main Content -->
+        <div style="width:70%;">
+            <div class="T_picklist">
+                <lightning-combobox
+                        name="filter"
+                        value={pickListDefault}
+                        options={pickListOptions}
+                        onchange={handlePicklistChange}
+                        placeholder="Select list view">
+                </lightning-combobox>
+            </div>
+            <div class="Cases_main d-flex">
+                <div class="Cases_items">
+
+                    <template for:each={data} for:item="i">
+                        <div class="Cases_Item d-flex " key={i.Id}>
+                            <div class="Cases_Item_content d-flex d-flex-fd-col" >
+                                <div class="Cases_Item_title">
+                                    <p>{i.Subject}</p>
+                                </div>
+                                <div class="Cases_Item_Details">
+                                    <span>Case ID: {i.CaseNumber}</span>
+                                    <span>Open date: {i.Date_Time_Opened__c}</span>
+                                    <span>Status: {i.External_Status__c}</span>
+                                </div>
+                            </div>
+
+                            <div class="Cases_Item_arrow" id={i.Id} >
+                                <a href={i.redUrl}>
+                                    <img src={ArrowIcon}  />
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </template>
+
+                    <div class="Cases_Item d-flex-jsc align-c Cases_btn_block">
+                        <a href="submit-case-page">
+                            <div class="Cases_btn" >
+                                CREATE A NEW CASE
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <div class="Cases_articles">
+                    <p>NEED ANSWER FAST?</p>
+
+                    <ul>
+                        <li><a href="/">This is an article title</a></li>
+                        <li><a href="/">This is an article title</a></li>
+                        <li><a href="/">This is an article title</a></li>
+                        <li><a href="/">This is an article title</a></li>
+                        <li><a href="/">This is an article title</a></li>
+
+
+                    </ul>
+                </div> -->
+
+            </div>
+        </div>
+        <!-- End Main Content -->
+        <!-- Need answer Fast Component-->
+        <div class="TRB_main_c" style="width:30%;">
+            <!-- <template for:each={data} for:item="i"> -->
+            <div class="TRB_topic_title_c" >
+                <a href='/'>
+                    NEED ANSWERS FAST?
+                </a>
+            </div>
+            <div class="TRB_related_ar_c" >
+                <ul>
+                    <template for:each={caseDeflactionArticles} for:item="i">
+                        <li key={i.Id}> <a href={i.UrlName}>{i.Title}</a></li>
+
+                    </template>
+                </ul>
+            </div>
+            <!-- </template> -->
+        </div>
+        <!-- Need answer Fast Component-->
+    </div>
+</template>

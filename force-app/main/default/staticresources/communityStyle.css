@@ -1,0 +1,1817 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url("./Images_Icons/fonts/BebasNeue.ttf");
+}
+@font-face {
+    font-family: 'Museo Sans 100';
+    src: url("./Images_Icons/fonts/MuseoSans-100.otf");
+}
+@font-face {
+    font-family: 'Museo Sans 300';
+    src: url("./Images_Icons/fonts/MuseoSans-300.otf");
+}
+@font-face {
+    font-family: 'Museo Sans 500';
+    src: url("./Images_Icons/fonts/MuseoSans_500.otf");
+}
+@font-face {
+    font-family: 'Museo Sans 700';
+    src: url("./Images_Icons/fonts/MuseoSans_700.otf");
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+.d-flex-btw {
+    display: flex;
+    justify-content: space-between;
+}
+.fl-wrap {
+    flex-wrap: wrap;
+}
+.d-flex-jsc{
+    display: flex;
+    justify-content: center;
+}
+.d-flex-fd-col{
+    flex-direction: column;
+}
+.align-c {
+    align-items: center;
+}
+
+/* Margins*/
+.mt1 {
+    margin-top: 1rem;
+}
+.mb1 {
+    margin-top: 1rem;
+}
+.ml1 {
+    margin-top: 1rem;
+}
+.mr1 {
+    margin-top: 1rem;
+}
+/* Padings */
+.pt1 {
+    padding-top: 1rem;
+}
+.pb1 {
+    padding-bottom: 1rem;
+}
+.pl1 {
+    padding-left: 1rem;
+}
+.pr1 {
+    padding-right: 1rem;
+}
+
+.colorWhite {
+    color: #fff;
+}
+.forceCommunityThemeSearch.jepsonInnerHeader .search-box {
+    font-family: 'Museo Sans 300' !important;
+    border-radius: 18px !important;
+    border: 1px solid #586189 !important;
+    color: #414665 !important;
+}
+.forceCommunityThemeSearch.jepsonInnerHeader .search-box:checked{
+    font-family: 'Museo Sans 300' !important;
+    border-radius: 18px !important;
+    border: 1px solid #586189 !important;
+    color: #414665 !important;
+}
+/*  Start Home Page Styles*/
+
+.HP_top_search {
+    height: 320px;
+    background-color: #414665;
+}
+.HP_top_search_text_input {
+    width: 59%;
+}
+.HP_top_search_img {
+    width: 42%;
+}
+.HP_top_search_text{
+    /* Desktop/H1 */
+
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 75px;
+    line-height: 81px;
+    margin-left: 13%;
+    text-transform: uppercase;
+    color: #E6B883;
+    margin-left: 13%;
+    margin-top: 10%;
+
+}
+.HP_top_search_input {
+    margin-top: 4%;
+    z-index: 5;
+
+}
+.HP_top_search_input input{
+    height: 54px;
+    width: 63%;
+    border-radius:3rem;
+    margin-left:13%;
+}
+
+.HP_input_icon {
+    margin-left: 17%;
+    margin-top: 2.1%;
+    position: absolute;
+}
+
+.HP_top_search_dots {
+    position: absolute;
+    /* bottom: 5%; */
+    z-index: 1;
+}
+
+.HP_category {
+    width: 100%;
+    height: 603px;
+    background-color: #F2F3F7;
+}
+
+.HP_category__title {
+    font-family: 'Bebas Neue';
+    font-size: 61px;
+    color: #414665;
+    padding: 5.5% 14.7% 0 14.7%;
+    
+}
+.HP_category__blocks {
+    margin-top: 2rem;
+    padding: 2% 7.6% 0 7.6%;
+    border: 1p solid red;
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-evenly;
+}
+.HP_category__item {
+    width: 270px;
+    font-family: 'Bebas Neue';
+    height: 286px;
+    margin-left:26px;
+    background-color: #fff;
+    font-size: 25px;
+    color: #61699c;
+    justify-content: center;
+
+}
+.HP_category__item:hover {
+    color: #3b3f58;
+}
+.HP_category__item:first-child{
+    margin-left: none;
+}
+.HP_category__item__label {
+    padding-top:20px;
+}
+
+.HP_more_solution {
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+    
+}
+.HP_more_solution_title {
+    margin-top: 2rem;
+    padding: 3.5% 14.7% 1.875% 14.7%;
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    display: flex;
+    color: #414665;
+    justify-content: center;
+}
+.HP_more_solution__most_viewed {
+    margin: 0 7.6% 0 7.6%;
+    font-family: 'Museo Sans 500';
+    font-size: 20px;
+    padding: 0 0 9px 0;
+    color: #E6B883;
+    border-bottom: 2px solid #E6B883;
+    width: 9%;
+}
+.HP_more_solution__content {
+    margin: 0 7.6% 0 7.6%;
+    height: 346px;
+}
+.HP_more_solution__links {
+    height: 100%;
+    width: 68%;
+    background-color: #F2F3F7;
+    padding-left: 4%;
+    display: flex;
+    justify-content: flex-start;
+}
+.HP_more_solution__links ul{
+    flex-direction: column;
+    justify-content: center;
+}
+.HP_more_solution__links ul li {
+    font-size: 20px;
+    margin: 12px 0px;
+    font-weight: normal;
+}
+.HP_more_solution__links ul li a {
+    color:#5B608B;
+    font-family: 'Museo Sans 300';
+}
+.HP_more_solution__links ul li a:hover {
+    color: #3b3f58;
+}
+.HP_more_solution__rightbar {
+    height: 100%;
+    width: 32%;
+    background-color: #586189;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.HP_more_solution__rightbar_title {
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 30px;
+}
+.HP_more_solution__rightbar_main {
+    font-family: 'Museo Sans 500';
+    width: 75%;
+    font-size: 32px;
+    text-align: center;
+}
+.HP_more_solution__rightbar_learnmore p a{
+    font-family: 'Museo Sans 100';
+    font-size: 20px;
+    color: #E6B883;
+}
+
+.SEARCH_Title{
+    font-family: 'Museo Sans 300';
+    color: #414665;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.SEARCH_Internal_Title{
+    font-family: 'Museo Sans 300';
+    color: #414665;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 24px;
+    cursor:pointer ;
+}
+.SEARCH_Header{
+    width: 1016px;
+    height: 47px;
+    left: 108px;
+    top: 113px;
+    font-family: 'Bebas Neue';
+    color: #414665;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 69px;
+    text-transform: lowercase;
+    width: 50%;
+    margin-left: 24px;
+    margin-top: 40px;
+}
+.SEARCH_Body{
+    color: #414665;
+    font-family: 'Museo Sans 300';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    
+    width: 50%;
+    padding-top: 4px;
+    padding-bottom: 24px;
+}
+.SEARCH_Button{
+    height: 51.06px;
+    left: 13.21%;
+    right: 4.49%;
+    top: calc(50% - 22px);
+    background: transparent;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 41px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05px;
+    color: rgb(88, 97, 141);
+    width: 155.23px;
+}
+.SEARCH_SELECT{
+    border: none; color: orange;
+    appearance: auto;
+   padding-left: 5px;
+}
+.CASE_HEADER{
+    width: 698px;
+    height: 57px;
+    border-bottom: 1px solid black;
+    background-color: #F4CFA2;
+}
+.CASE_BLOCK{
+    width: 700px;
+    max-height: 500px;
+    margin: 10px;
+    border: 1px solid black;
+    height: 169px;
+}
+.CASE_HEADER_BODY{
+    left: 8.96%;
+    right: 67.71%;
+    top: 16.07%;
+    bottom: 83.12%;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.012px;
+    color: #414665; padding-top: 18px; padding-left: 20px; padding-bottom: 21px;
+}
+.CASE_ELEMENT{display: inline-flex; position: static;
+    width: auto;
+    height: 32px;
+    left: 184px;
+    top: 0px;
+    color: #5B608B;
+    font-size: "Museo Sans 300";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;     padding-left: 20px; margin-bottom: 15px;}
+.CASE_ID{
+    display: inline-flex;width: 100%;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    font-size: "Museo Sans 300";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 40px;
+    padding-left: 20px;
+    color: #5B608B;
+}
+.CASE_INTERNAL{
+    font-size: "Museo Sans 300";
+    display: inline;
+    margin-top: 0;
+    width: 646px;
+    overflow: auto;
+    height: 112px;
+    color: #5B608B;
+}
+/* Home page Adaptation Start*/
+@media screen and (max-width: 320px) {
+    .HP_top_search_text {
+        font-size: 63px;
+        margin-top: 14%;
+    }
+    .HP_top_search_img {
+        display: none;
+    }
+    .HP_top_search_text_input {
+        width: 100%;
+        margin-top: 3%;
+    }
+    .HP_top_search_input input {
+        width: 80%;
+    height: 45px;
+    }
+    .HP_input_icon {
+        margin-top: 2.9%;
+    }
+    .HP_category__blocks {
+        padding: 0 9% 5% 0;
+        justify-content: space-around;
+    }
+    .HP_category {
+        height: auto;
+    }
+    .HP_category__item {
+        margin-top: 10%;
+    }
+    .HP_more_solution__most_viewed {
+        width: 41%;
+        margin: 12% 7.6% 0 7.6%;
+    }
+    .HP_more_solution {
+        height: 710px;
+    }
+    .HP_more_solution__content {
+        flex-direction: column;
+        
+    }
+    .HP_more_solution__links {
+        width: 100%;
+    }
+    .HP_more_solution__rightbar {
+        height: auto;
+        width: 100%;
+    }
+    .HP_more_solution__links ul li {
+        font-size: 12px;
+    }
+    .HP_more_solution__rightbar_title {
+        padding-top: 22px;
+    }
+    .HP_more_solution__rightbar_main{
+        width: 51%;
+        font-size: 27px;
+        padding: 26px 0 26px 0;
+    }
+    .HP_more_solution__rightbar_learnmore {
+        padding-bottom: 24px;
+    }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+
+    .HP_top_search_text {
+        font-size: 58px;
+        margin-top: 14%;
+    }
+    .HP_top_search_img {
+        display: none;
+    }
+    .HP_top_search_text_input {
+        width: 100%;
+        margin-top: 3%;
+    }
+    .HP_top_search_input input {
+        width: 74%;
+    }
+    .HP_input_icon {
+        margin-top: 2.9%;
+    }
+
+    .HP_top_search_img {
+        display: none;
+    }
+    .HP_top_search_text_input {
+        width: 100%;
+        margin-top: 3%;
+    }
+    .HP_top_search_input input {
+        width: 74%;
+    }
+    .HP_input_icon {
+        margin-top: 2.9%;
+    }
+
+
+    .HP_category__blocks {
+        padding: 0 2% 5% 0;
+        justify-content: space-around;
+    }
+    .HP_category {
+        height: auto;
+    }
+    .HP_category__item {
+        margin-top: 10%;
+    }
+    .HP_more_solution__most_viewed {
+        width: 27%;
+    }
+
+    .HP_more_solution {
+        height: auto;
+    }
+    .HP_more_solution__content {
+        flex-direction: column;
+    }
+    .HP_more_solution__links {
+        width: 100%;
+    }
+    .HP_more_solution__rightbar {
+        height: auto;
+        width: 100%;
+    }
+    .HP_more_solution__links ul li {
+        font-size: 14px;
+    }
+    .HP_more_solution__rightbar_title {
+        padding-top: 26px;
+    }
+    .HP_more_solution__rightbar_main{
+        width: 51%;
+        font-size: 32px;
+        padding: 26px 0 26px 0;
+    }
+    .HP_more_solution__rightbar_learnmore {
+        padding-bottom: 24px;
+    }
+}
+@media (min-width: 481px) and (max-width: 600px) {
+    .HP_category__blocks {
+        padding: 0 2% 5% 0;
+        justify-content: space-around;
+    }
+    .HP_top_search_text {
+        font-size: 63px;
+        margin-top: 14%;
+    }
+    .HP_top_search_img {
+        display: none;
+    }
+    .HP_top_search_text_input {
+        width: 100%;
+        margin-top: 3%;
+    }
+    .HP_top_search_input input {
+        width: 74%;
+    }
+    .HP_input_icon {
+        margin-top: 2.9%;
+    }
+    .HP_category {
+        height: auto;
+    }
+    .HP_category__item {
+        margin-top: 10%;
+    }
+    .HP_more_solution__most_viewed {
+        width: 21%;
+    }
+    .HP_more_solution {
+        height: auto;
+    }
+    .HP_more_solution__content {
+        flex-direction: column;
+    }
+    .HP_more_solution__links {
+        width: 100%;
+    }
+    .HP_more_solution__rightbar {
+        height: auto;
+        width: 100%;
+    }
+    .HP_more_solution__links ul li {
+        font-size: 16px;
+    }
+    .HP_more_solution__rightbar_title {
+        padding-top: 26px;
+    }
+    .HP_more_solution__rightbar_main{
+        width: 51%;
+        font-size: 32px;
+        padding: 26px 0 26px 0;
+    }
+    .HP_more_solution__rightbar_learnmore {
+        padding-bottom: 24px;
+    }
+
+    
+}
+@media (min-width: 601px) and (max-width: 768px) {
+    .HP_top_search{
+        height: 16rem;
+    }
+    .HP_top_search_input input{
+        height: 44px;
+        width: 75%;
+    }
+    .HP_top_search_text{
+        font-size: 56px;
+    }
+    .HP_category__blocks {
+        padding: 0 4% 5% 0;
+        justify-content: space-around;
+    }
+    .HP_category {
+        height: auto;
+    }
+    .HP_category__item {
+        margin-top: 10%;
+    }
+    .HP_more_solution__most_viewed {
+        width: 17%;
+    }
+    .HP_more_solution__links ul li {
+        font-size: 17px;
+        margin: 13px 0px;
+    }
+    .HP_more_solution__rightbar_title {
+        font-size: 20px;
+    }
+    .HP_more_solution__rightbar_main {
+        font-size: 27px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .HP_top_search{
+        height: 16rem;
+    }
+    .HP_top_search_text{
+        font-size: 56px;
+        margin-top: 6%;
+    }
+    .HP_category__blocks {
+        padding: 0 15% 5% 12%;
+        justify-content: space-around;
+    }
+    .HP_category {
+        height: auto;
+    }
+    .HP_category__item {
+        margin-top: 10%;
+    }
+    .HP_more_solution__most_viewed {
+        width: 12%;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .HP_category__blocks {
+        padding: 2% 2% 5% 1.5% ;
+        
+    }
+    .HP_more_solution__most_viewed {
+        width: 10%;
+    }
+}
+@media (min-width: 1281px) and (max-width: 1366px) {
+    .HP_category__blocks {
+        padding: 2% 3.6% 0 4.6% ;
+    }
+}
+@media (min-width: 1367) and (max-width: 1440px) {
+    .HP_category__blocks {
+        padding: 2% 2.6% 5% 7%;
+    }
+}
+@media (min-width: 1441px) and (max-width: 1600px) {
+    .HP_category__blocks {
+        padding: 2% 3.6% 5% 7%;
+    }
+}
+@media (min-width: 1600px) and (max-width: 2880px) {
+    .HP_category__blocks {
+        padding: 2% 7.6% 5% 7%;
+    }
+}
+/* Home page Adaptation End*/
+
+/*  End Home Page Styles*/
+
+/* Start Footer Styles */
+
+.F_main {
+
+}
+
+.F_main_general {
+    width: 100%;
+    height: 330px;
+    background-color: #414665;
+    padding: 2%;
+}
+.F_main_tiny {
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-family: 'Museo Sans 300';
+}
+.F_general_first{
+    width:50%;
+    font-size: 61px;
+    font-family: 'Bebas Neue';
+    color: #F1B97C;
+    align-items: flex-end;
+    padding: 3% 5% 0px 0;
+    /* background-color: green; */
+}
+.F_general_second{
+    width:50%;
+    color: #fff;
+    font-family: 'Museo Sans 300';
+    font-size: 20px;
+    align-items: flex-start;
+    padding: 4% 0 0 0%;
+}
+.F_general_second_btn {
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    color: #fff;
+    padding: 7px 40px;
+    border: 1px solid #fff;
+    margin-top: 15px;
+}
+.F_general_second_btn:hover {
+    color:aliceblue;
+}
+.F_main_tiny_box {
+    width: 86%;
+    height:50px;
+    padding-top: 20px;
+
+}
+/* End Footer Styles */
+
+/* Start Topics Page Styles*/
+
+.T_head {
+    width: 100%;
+    height: 144px;
+    background-color: #414665;
+    font-size: 61px;
+    font-family: 'Bebas Neue';
+    
+}
+.T_content {
+    margin: 100px 100px;
+    /* margin-top: 50px; */
+    border-bottom: 1px solid #747DA3;
+    justify-content: flex-start;
+}
+.T_item {
+    width: 30%;
+    height: auto;
+    margin-bottom: 5%;
+    /* border:1px solid red; */
+    margin-left: 25px;
+}
+.T_item_img_box {
+    width: 80px;
+    height: 70px;
+}
+.T_item_title_box{
+    padding-top:12px;
+}
+.T_item_title_box a{
+    font-size: 32px;
+    color: #414665;
+    font-family: 'Museo Sans 500';
+}
+.T_item ul li:hover{
+    color: #414665;;
+
+}
+.T_item ul li {
+    margin-top: 12px;
+}
+.T_item ul li a{
+    color:#5B608B;
+    font-size: 16px;
+    line-height:22px;
+    font-family: 'Museo Sans 100';
+    
+}
+/* End Topics Page Styles*/
+
+/*Case List Views Start*/
+
+.Cases_main {
+    padding: 80px 108px;
+    width: 100%;
+    height: auto;
+}
+.T_picklist {
+    padding: 30px 108px 0 108px;
+    width: 450px;
+
+}
+.Cases_items {
+    width: 100%;
+}
+.Cases_Item {
+    width: 100%;
+    /* height: 100px; */
+    background-color: #F2F3F7;
+    margin-bottom: 40px;
+}
+.Cases_btn_block {
+    height: 100px;
+}
+.Cases_btn {
+    width: 253px;
+    height: 52px;
+    border: 2px solid rgba(84, 90, 125, 0.749);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    color: #58618D;
+}
+.Cases_btn:hover {
+    color: #454d75;
+    border: 2px solid #454d75;
+}
+.Cases_Item_content {
+    width: 90%;
+    padding: 20px 0 20px 20px;
+}
+.Cases_Item_arrow {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 33px 0 0;
+    align-items: center;
+    
+}
+.Cases_Item_arrow img {
+    pointer-events: none;
+}
+.Cases_Item_arrow:hover {
+    transition: 0.2s;
+    padding: 0 23px 0 0;
+    cursor: pointer;
+}
+
+.Cases_Item_title {
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    color: #414665;
+    padding-bottom: 10px;
+    word-break: break-all;
+}
+.Cases_Item_Details {
+    font-family: 'Museo Sans 300';
+    font-size: 16px;
+    line-height: 32px;
+    color: #5B608B;
+    padding-right: 0;
+}
+.Cases_Item_Details span {
+    margin-right: 40px;
+}
+
+.Cases_articles {
+    width: 34%;
+    height: 372px;
+    margin-left: 4%;
+    background-color: #F2F3F7;
+    padding: 40px 20px;
+}
+.Cases_articles p {
+    font-family: 'Bebas Neue';
+    color: #414665;
+    font-size: 20px;
+}
+.Cases_articles ul li {
+    line-height: 29px;
+    margin-top:18px;
+}
+.Cases_articles ul li a{
+    font-family: 'Museo Sans 300';
+    font-size: 20px;
+    color: #586189;
+    line-height: 29px;
+}
+.Cases_articles ul li a:hover{
+    color: #43508b;
+
+}
+@media screen and (max-width: 320px) {
+    .T_head {
+        font-size: 46px;
+    }
+    .T_picklist {
+        width: 136%;
+        padding: 30px 108px 0 0;
+    }
+    .Cases_main {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+    .Cases_articles {
+        width: 100%;
+        margin-left: 0;
+        height: 372px;
+        background-color: #F2F3F7;
+        padding: 40px 20px;
+    }
+    .Cases_items {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .Cases_Item_Details {
+        display: flex;
+        flex-direction: column;
+    }
+    .Cases_Item_content {
+        width: 100%;
+    }
+    .Cases_Item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Cases_Item_arrow {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .T_picklist {
+        padding: 30px 108px 0 40px;
+        width: 136%;
+    }
+    .Cases_main {
+        flex-direction: column;
+        padding: 60px 0px;
+    }
+    .Cases_articles {
+        width: 100%;
+        margin-left: 0;
+        height: 372px;
+        background-color: #F2F3F7;
+        padding: 40px 20px;
+    }
+    .Cases_items{
+        width: 100%;
+    }
+}
+/*Case List Views End  */
+
+.CASE_CD_btn {
+    font-family: 'Bebas Neue';
+    color: #58618D;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 2px solid #58618D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 185px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+
+.ADP_main {
+    padding: 0 0 40px 0;
+    margin: 40px 108px;
+    border-bottom: 1px solid #747DA3;
+}
+.ADP_subheader {
+    color: #E6B883;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.ADP_gentitle {
+    font-family: 'Museo Sans 300';
+    font-size: 40px;
+    color: #414665;
+    padding: 0 0 20px 0;
+}
+.ADP_summary {
+    font-size: 20px;
+    font-family: 'Museo Sans 100';
+    line-height: 32px;
+    color: #414665;
+    text-align: justify;
+}
+
+.ADP_summary a {
+    color: #E6B883;
+}
+.ADP_categoryTags {
+    margin: 40px 108px;
+
+}
+.ADP_category_Item {
+    font-family: 'Museo Sans 300';
+    padding: 10px 32px;
+    color:#586189;
+    border-radius: 99px;
+    border: 1px solid #586189;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 8px;
+}
+.ADP_category_Item:hover {
+    cursor: pointer;
+    border: 1px solid #414665;
+    color: #414665;
+}
+.ADP_helpful {
+    margin: 40px 108px;
+    color: #414665;
+    font-family: 'Museo Sans 500';
+    font-size: 20px;
+    padding: 14px 12px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F3F7;
+}
+.ADP_helpful_item {
+    padding: 6px 12px;
+    font-family: 'Museo Sans 300';
+    margin-right: 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #586189;
+}
+.ADP_helpful_item:hover {
+    cursor: pointer;
+    border: 1px solid #414665;
+    color: #414665;
+}
+
+/* Create Case*/
+.CC_main {
+    margin: 80px 142px;
+}
+.CC_leftbar {
+    padding: 0 31px;
+}
+.CC_rightbar {
+    padding: 0 26px;
+    border-left: 1px solid #747DA3;
+}
+.CC_input {
+    margin: 17px 0 0 0;
+}
+
+.CC_input label .CC_picklist label {
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+    color: #414665;
+}
+.CC_input input{
+    width: 423px;
+    height: 46px;
+    font-family: 'Museo Sans 300';
+    color: #414665;
+    font-size: 16px;
+    border-radius: 0;
+    background-color: #E9EAEE;
+}
+.CC_input input:focus {
+    border-radius: 0;
+    background-color: #E9EAEE;
+    box-shadow: none;
+    border: none;
+}
+.CC_input input[role="combobox"] {
+    border-radius: 0;
+    background-color: #E9EAEE;
+    box-shadow: none;
+    border: none;
+}
+.CC_input textarea {
+    width: 423px;
+    height: 90px;
+    border-radius: 0;
+    background-color: #E9EAEE;
+}
+.CC_input textarea:focus {
+    border-radius: 0;
+    background-color: #E9EAEE;
+    box-shadow: none;
+    border: none;
+}
+.CC_btn {
+    color: #58618D;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    border: 2px solid rgba(84, 90, 125, 0.749);
+    padding: 8px 0;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 250px;
+}
+.CC_btn:hover {
+    border: 2px solid rgba(69, 76, 117, 0.749);
+    color: rgba(69, 76, 117, 0.749);
+    cursor: pointer;
+}
+/* End Create Case*/
+
+.forceCommunityTopicCatalog .topicHierarchy-topBox {
+    width: 30%;
+    border: none;
+}
+.forceCommunityTopicCatalog ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 70px 40px;
+}
+.forceCommunityTopicCatalog ul>div.topicHierarchy-topBox {
+    width: 30%;
+    margin-left: 3%;
+}
+
+.forceCommunityTopicCatalog .topicHierarchy-top {
+    font-size: 32px;
+    line-height: 50px;
+    color: #414665;
+    font-family: 'Museo Sans 700';
+}
+.topicHierarchy-topBox li>div.topicHierarchy-entry a span {
+    
+}
+.slds-text-heading_small, .slds-text-heading--small {
+    font-size: 16px;
+    line-height: var(--lwc-lineHeightHeading,1.25);
+}
+.topicHierarchy-childrenList {
+    margin-top: 4px !important;
+    margin-left: 0px !important;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.topicHierarchy-entry > span{
+    color: red !important;
+}
+
+.forceCommunityTopicCatalog ul.topicHierarchy-grandChildList {
+    padding-left: var(--lwc-fcSpacingMedium,18px);
+    margin: 0;
+    padding: 0 !important;
+}
+.forceCommunityTopicCatalog .topicHierarchy-childrenList .topicHierarchy-entry a {
+    color: #5B608B;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Museo Sans 300';
+}
+
+/* Related articles */
+.selfServiceSimilarArticles42>h2 {
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    line-height: 24px;
+    color: #414665;
+    margin-top: 50px;
+    background-color: #F2F3F7;
+    width: 100%;
+    padding: 40px 24px 0 24px;
+}
+.selfServiceSimilarArticles42 ul {
+    display: table;
+    width: 100%;
+    background-color: #F2F3F7;
+    padding: 0 24px; 
+}
+.selfServiceSimilarArticles42 ul:active {
+    border: none;
+}
+span.slds-text-body_small.slds-hyphenate {
+    border: none;
+    font-size: 20px;
+    font-family: 'Museo Sans 100';
+    color: #586189;
+}
+.slds-border_bottom, .slds-border--bottom {
+    border: none;
+}
+ul.tabs__nav li:first-child{
+    display: none;
+}
+
+span.headlineTitleText>span.uiOutputText {
+    /* color: red; */
+    font-size: 32px;
+    color: #414665;
+    font-family: 'Museo Sans 500';
+    text-align: start;
+    line-height: 50px;
+}
+.forceCommunityHeadline .headlineTitle {
+    text-align: start;
+    /* padding-left: 3.5%; */
+    padding: 2% 0 2.5% 3.5%;
+}
+
+/* Hide description title*/
+.forceCommunityTopicDescription .header-label {
+    display: none;
+}
+
+.forceChatterOutputDescription .groupDescription {
+    font-family: 'Museo Sans 300';
+    font-size: 20px;
+    line-height: 32px;
+    color: #414665;
+    margin-top: -4%;
+    padding-left: 4%;
+}
+.uiTabset--default .tabs__nav {
+    border: none;
+}
+.selfServiceArticleListItem {
+    border: none;
+    margin-left: 4% !important;
+
+}
+ul.tabs__nav {
+    margin-left: 0% !important;
+}
+.forceCommunityResultsList .article-list .footer {
+    display: none;
+}
+.selfServiceTopicArticleList .selfServiceArticleListItem {
+    padding: 1%;
+    border: none;
+    margin-left: 5% !important;
+}
+h2.article-head {
+    color: #5B608B !important;
+    font-size: 20px;
+    font-family: 'Museo Sans 100' !important;
+}
+a.tabHeader {
+    border: none !important;
+}
+.tabHeader span {
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+    color: #414665;
+}
+
+/*Topics rightbar*/
+.TRB_main {
+    /* width: 100%; */
+    height: auto;
+    background-color: #F2F3F7;
+    margin: 47px 40px;
+    padding: 32px 46px;
+}
+.TRB_topic_title a {
+    color: #414665;
+    font-size: 24px;
+    font-family: 'Museo Sans 500';
+    margin-bottom: 30px;
+}
+.TRB_related_ar ul>li>a {
+    color: #5B608B;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Museo Sans 300';
+    text-align: justify;
+    
+}
+.TRB_related_ar ul > li {
+    margin: 20px 0;
+}
+/*End Topics rightbar*/
+.slds-col_padded, .slds-col--padded  {
+    padding: 0 !important;
+}
+
+
+
+/**/
+    .AD_MAIN {
+        height: 200px;
+        width: 100%;
+        border: 1px solid #747DA3;
+        margin-top: 50px;
+        /* margin-bottom: 50px; */
+        /* margin-left: 108px; */
+        background:  #F2F3F7;
+    }
+    .AD_IMG_block {
+        width: 185px;
+        height: 100%;
+    }
+    .AD_IMG_block img {
+        width: 300px;
+        height: 195px;
+    }
+    .AD_top {
+        width: 100%;
+        padding: 21px 34px 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .AD_label {
+        color: #586189;
+        font-family: 'Bebas Neue';
+        font-size: 32px;
+        line-height: 45px;
+    }
+    .AD_label a{
+        color: #586189;
+        font-size: 32px;
+    }
+    .AD_description {
+        color: #414665;
+        font-size: 20px;
+        line-height: 32px;
+        font-family: 'Museo Sans 100';
+        padding: 21px 34px 12px 20px;
+    }
+
+/**/
+
+.voted {
+    border: 2px solid #414665;
+}
+.voted:hover {
+    border: 2px solid #414665;
+}
+.forceCommunityCaseDeflection {
+    background-color: #F2F3F7;
+    padding: 40px 24px;
+    margin-top: 80px;
+}
+span.slds-text-body_small.slds-show {
+    font-size: 20px;
+    color: #586189;
+    font-family: 'Museo Sans 100';
+    line-height: 29px;
+}
+.slds-p-vertical_small.slds-border_bottom.slds-hyphenate span:last-child {
+    display: none;
+}
+span.subtitle {
+    display: none;
+}
+.slds-text-align_center, .slds-text-align--center {
+    text-align: start;
+    color: #414665;
+    font-family: 'Bebas Neue' !important;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.News_Header{
+    width: 100%;
+    height: 144px;
+    background-color: #414665;
+    display: inline-flex;
+    font-size: 61px;
+    color: white;
+    font-family: 'Bebas Neue';
+
+
+}
+
+
+.SU_main {
+    margin: 40px 108px 40px 108px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #747DA3;
+}
+.SU_img {
+    width: 100%;
+    
+}
+.SU_Title {
+    color: #414665;
+    font-family: 'Museo Sans 500';
+    font-size: 32px;
+    line-height: 50px;
+    margin-top: 40px;
+}
+.SU_description {
+    color: #414665;
+    font-family: 'Museo Sans 300';
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 8px;
+}
+
+.SU_updates_list_title {
+    margin-top: 46px;
+    color: #414665;
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+}
+.SU_updates_list {
+    font-family: 'Museo Sans 300';
+    
+}
+.SU_updates_list ul>li{
+    line-height: 32px;
+    padding: 6px 0;
+
+}
+.SU_updates_list ul>li a {
+    color: #5B608B;
+    font-size: 20px;
+    
+}
+.uiAbstractList .listContent {
+    padding: 40px 0 ;
+    margin-top: 16px;
+    background: #F2F3F7;
+    width: 392px ;
+    /* padding: 40px 46px !important;
+    margin-top: 40px !important;
+    background: #F2F3F7;
+    width: 392px !important; */
+}
+.forceCommunityTopArticleItem .article-title{
+    font-size: 16px !important;
+}
+.forceCommunityTopArticleItem .article-title-link {
+    color: #5B608B !important;
+    font-size: 16px !important;
+    font-family: 'Museo Sans 300' !important;
+}
+
+.forceCommunityTopArticleListForTopic .topicHeaderLink {
+    font-family: 'Museo Sans 500' !important;
+    color: #414665 !important;
+    font-size: 20px !important;
+}
+.SU_btn_loadmore {
+    color: #58618D;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    border: 2px solid rgba(84, 90, 125, 0.749);
+    padding: 8px 0;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 155px;
+}
+.SU_btn_loadmore:hover {
+    border: 2px solid rgba(69, 76, 117, 0.749);
+    color: rgba(69, 76, 117, 0.749);
+    cursor: pointer;
+}
+
+
+/* Topic detail apge*/
+
+.TopDet_main {
+    margin: 47px 111px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #414665;
+}
+.TopDet_img img {
+    width: 80px;
+    height: 70px;
+}
+.TopDet_title {
+    font-family: 'Museo Sans 500';
+    color: #414665;
+    font-size: 32px;
+    margin: 20px 0 0 0;
+}
+
+.TopDet_desc {
+    font-family: 'Museo Sans 100';
+    color: #414665;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: justify;
+}
+
+/*Search Standart*/
+.slds-border_right, .slds-border--right {
+    display: none;
+}
+.slds-show_inline-block, .slds-show--inline-block {
+    font-size: 20px;
+    font-family: 'Museo Sans 300';
+    color: #414665;
+    line-height: 30px;
+
+}
+.slds-grid_vertical-align-center, .slds-grid--vertical-align-center {
+    color: #414665;
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+}
+.searchResultsSummary {
+    color: #414665;
+    font-family: 'Museo Sans 100';
+    font-size: 16px;
+}
+.listContent {
+    padding: 0 !important;
+    width: 100% !important;
+}
+mark {
+    color: #414665;
+    font-family: 'Museo Sans 300';
+    font-size: 16px;
+    background-color: #fff;
+}
+.forceOutputLookupWithPreview a.textUnderline {
+    border: none !important;
+}
+.outputLookupContainer.forceOutputLookupWithPreview a {
+    color: #414665;
+    font-family: 'Museo Sans 100';
+    font-size: 16px;
+}
+
+.forceCommunitySearch .gridTitle{
+    color: #414665;
+    font-family: 'Museo Sans 300';
+    font-size: 20px;
+}
+.slds-has-dividers_bottom>.slds-list__item, .slds-has-dividers_bottom>.slds-item, .slds-has-dividers--bottom>.slds-list__item, .slds-has-dividers--bottom>.slds-item {
+    border: none !important;
+}
+span.uiOutputText {
+    color: #414665;
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+}
+ul.slds-list--horizontal.slds-wrap.slds-has-dividers--right li {
+    color: #414665;
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+}
+tbody {
+    /* display: none; */
+}
+a.outputLookupLink {
+    color: #414665;
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+}
+td span{
+    color: #414665;
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+}
+.forceOutputLookupWithPreview a.textUnderline {
+    color: #414665;
+    font-family: 'Museo Sans 700';
+    font-size: 16px;
+}
+.forceCommunityAllResults .forceSearchResultsGridView .searchScroller, .forceCommunityAllResults .forceSearchResultsGridView.gridInScroller {
+    padding: 12px;
+}
+.forceSearchResultsMultiScope .resultsItem .forceSearchSearchResultsGridHeader {
+    margin: 0 33px 0 33px;
+}
+.slds-page-header.slds-page-header_joined.slds-is-relative.forceSearchSearchResultsGridHeader.forceSearchResultsGridView {
+    border: none !important;
+}
+
+.slds-page-header.slds-page-header_joined.slds-is-relative.forceSearchSearchResultsGridHeader{
+    border: none;
+}
+button.slds-button {
+    color: #E6B883;
+}
+ul.slds-list--horizontal.slds-wrap.slds-has-dividers--right li.slds-item{
+    color: #414665;
+    font-family: 'Museo Sans 300';
+    font-size: 16px;
+    line-height: 24px;
+}
+ul.slds-list--horizontal.slds-wrap.slds-has-dividers--right li.slds-item>span {
+    color: #414665;
+    font-family: 'Museo Sans 300';
+    font-size: 16px;
+    line-height: 24px;
+}
+.forceCommunitySearch .forceSearchSearchResultsGridHeader {
+    padding-bottom: 0;
+}
+.slds-page-header {
+    padding: 0;
+    padding-bottom: 24px !important;
+    margin: 0 24px;
+    border-bottom: 1px solid #747DA3 !important;
+}
+
+
+.uiTabBar ul li {
+    display: none !important;
+}
+
+.uiTabBar ul li:nth-child(4) {
+    display: block !important;
+}
+
+.forceChatterPublisherVisibilityWrapper {
+    display: none;
+}
+
+.hide {
+    margin-left: 1000000px;
+}
+.show {
+    margin-left: 0;
+}
+.resultBody {
+    color: #414665;
+    font-family: 'Museo Sans 300';
+    font-size: 14px;
+    line-height: 24px;
+}
+.outputLookupContainer.forceOutputLookupWithPreview a{
+    font-family: 'Museo Sans 700'; 
+
+}
+.outputLookupContainer.forceOutputLookupWithPreview a mark {
+    font-family: 'Museo Sans 700'; 
+
+}
+.slds-tile__detail {
+    display: none;
+}
+.TRB_main_c {
+    /* width: 100%; */
+    height: 100%;
+    background-color: #F2F3F7;
+    margin: 156px 40px;
+    padding: 32px 46px;
+}
+.TRB_topic_title_c a {
+    color: #414665;
+    font-size: 24px;
+    font-family: 'Bebas Neue';
+    margin-bottom: 30px;
+}
+.TRB_related_ar_c ul>li>a {
+    color: #5B608B;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Museo Sans 300';
+    text-align: justify;
+    
+}
+.TRB_related_ar_c ul > li {
+    margin: 20px 0;
+}
+
+/* .slds-post__footer {
+    display: none !important;
+} */
+.forceChatterStyle .cuf-media-right {
+    display: none !important;
+}
+.forceChatterFeedInner .feedActions{
+    display: none;
+}
+.cuf-element {
+    margin: 16px 30px;
+    background-color: #F2F3F7 !important;
+}
+
+.cuf-feedback.slds-feed__item-comments.inFeed.feed__item-comments--threadedCommunity.forceChatterFeedback--default.forceChatterFeedback {
+    display: none;
+}
+.cuf-preamble.slds-grid.slds-grid--align-spread.slds-has-flexi-truncate p span {
+    color: #414665 !important;
+    font-family: 'Museo Sans 300';
+    font-size: 16px;
+
+}
+.cuf-body div div p span {
+    color: #414665 !important;
+    font-family: 'Museo Sans 300';
+    font-size: 14px;
+}
+a.slds-text-color--weak.cuf-timestamp.drillIn.drillInTarget {
+    color: #414665 !important;
+    font-family: 'Museo Sans 300';
+    font-size: 12px;
+}
+.forceChatterFeedAuxBody .cuf-auxBody {
+    border: none !important;
+    padding: 0 !important;
+}
+.forceChatterStyle--default .cuf-feedElement.cuf-feedElement {
+    padding: 16px 30px;
+}
+.forceChatterFeedAuxBodyRecordSummary--default .rsLink {
+    display: none !important;
+}
+.forceChatterFeedAuxBodyRecordSummary--default a.cuf-wrapperAnchor{
+    border: none !important;
+}
+.forceChatterFeedAuxBody--default.forceChatterFeedAuxBody article ul li span {
+    color: #414665 !important;
+    font-family: 'Museo Sans 300';
+    font-size: 12px;
+}
+.forceChatterFeedAuxBody--default.forceChatterFeedAuxBody article ul li {
+    color: #414665 !important;
+    font-family: 'Museo Sans 300';
+    font-size: 12px;
+}
+
+.forceChatterStyle--default .slds-feed__item {
+    margin: 0 !important;
+    padding: 0px 0 0 0 !important;
+} 
+/* [data-type="CreateRecordEvent"]{
+    display: none !important;
+}
+[data-type="TrackedChange"]{
+    display: none !important;
+}
+
+.classHider {
+    display: none;
+}*/
+
+.cuf-addTopicsContainer.cuf-addTopics.forceChatterPillContainer {
+    display: none !important;
+} 
+
+.backToListBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    color: #58618D;
+    width: 100%;
+    padding: 8px 25px;
+    border: 2px solid rgba(84, 90, 125, 0.749);
+    margin-top: 40px;
+}
+
+
+
+.subnav_main {
+    width: 100%;
+    padding: 10px 100px;
+    background-color: #F2F3F7;
+}
+
+.siteforceContentArea .comm-layout-column .ui-widget:not(:last-child), .siteforceContentArea .cb-section_column .ui-widget:not(:last-child){
+    margin: 0 !important;
+}
+.subnav_main a {
+    font-size: 14px;
+    font-family: 'Museo Sans 300';
+    color: #414665;
+}
+.subnav_main a:last-child{
+    font-family: 'Museo Sans 500';
+}
+figure.slds-p-bottom--xx-large {
+    display: none !important;
+}
+.uiAbstractList.showEmptyContent:not(.loading) .emptyListContent {
+    background-color: #fff;
+}
+.slds-page-header {
+    border: none !important;
+}
+.forceCommunitySearch .forceSearchNoResults .noResults{
+    text-align: center !important;
+}
+.formattedTextLookupTitle[knowledgeui-resultStencil_resultStencil]{
+    border: none !important;
+    color: #414665 !important;
+    font-family: 'Museo Sans 300';
+    font-size: 16px;
+}

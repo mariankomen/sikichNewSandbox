@@ -1,0 +1,32 @@
+<template>
+    <template if:true={enabled}>
+    <div class="AD_MAIN d-flex">
+        <div class="AD_IMG_block">
+            <img src={image}/>
+        </div>
+        <div style="width: 100%;">
+            <div class="d-flex AD_top">
+                <!-- Label -->
+                <div class="AD_label">
+                    <a href={link}  target="_blank">{title}</a>
+                </div>
+                <!-- Arrow -->
+                <div class="AD_arrow">
+                    <a href={link}  target="_blank">
+                        <img src={ArrowIcon}/>
+                    </a>
+                </div>
+            </div>
+
+            <div style="padding-left: 20px;">
+                <img src={ColorBar}/>
+            </div>
+
+            <div class="AD_description">
+                <p>
+                    {subtitle}
+                </p>
+            </div>
+        </div>
+    </div></template>
+</template>

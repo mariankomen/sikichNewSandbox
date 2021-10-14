@@ -1,0 +1,118 @@
+<template>
+    
+    <div class="HP_top_search d-flex">
+        <div class="HP_top_search_text_input">
+            <div class="HP_top_search_text">
+                <p>How can we help</p>
+            </div>
+            <div class="HP_top_search_input">
+                <!-- <lightning-input type="text" name="input1" ></lightning-input> -->
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <img   src={SearchIcon} class="HP_input_icon" onclick={searchSubmit}/>
+                        <input  type="text" id="text-input-id-5"
+                                placeholder="SEARCH"
+                                class="slds-input"
+                                style="padding-left: 64px; font-size: 16px; line-height: 20px;"
+                                onkeyup={handleInputChange}
+                                onsubmit={searchSubmit}
+                                value={inputValue}/>
+                    </div>
+                </div>
+            </div>
+            <div class="HP_top_search_dots">
+                <img src={Dots}/>
+            </div>
+            
+        </div>
+
+        <div class="HP_top_search_img">
+            <img src={Top_Right_Img} style="height: 100%;"/>
+        </div>
+    </div>
+
+    <div class="HP_category">
+        <div class="HP_category__title d-flex d-flex-fd-col align-c" >
+            <p>CATEGORIES</p>
+            <img src={ColorBar}/>
+        </div>
+        <div class="HP_category__blocks">
+
+            <template for:each={navBlocks} for:item="i">
+                <a href={i.url} key={i.id}>
+                    <div class="HP_category__item d-flex d-flex-fd-col align-c" >
+                        <div>
+                            <img src={i.img}/>
+                        </div>
+                        <div class="HP_category__item__label">{i.name}</div>
+                    </div>
+                </a>
+            </template>
+
+            
+
+
+
+
+            <!-- <a href='https://buildcomm-talisbio.cs219.force.com/customersuccess/s/topic/0TO8G000000000WWAQ/everyday-use'>
+                <div class="HP_category__item d-flex d-flex-fd-col align-c">
+                    <div>
+                        <img src={IconUses}/>
+                    </div>
+                    <div class="HP_category__item__label">EVERYDAY USE</div>
+                </div>
+            </a>
+            <a href='https://buildcomm-talisbio.cs219.force.com/customersuccess/s/topic/0TO8G000000000VWAQ/help-center'>
+                <div class="HP_category__item d-flex d-flex-fd-col align-c">
+                    <div>
+                        <img src={IconHelp}/>
+                    </div>
+                    <div class="HP_category__item__label">HELP CENTER</div>
+                </div>
+            </a>
+            <a href='https://buildcomm-talisbio.cs219.force.com/customersuccess/s/topic/0TO4x000000xCGHGA2/product-documentation'>
+                <div class="HP_category__item d-flex d-flex-fd-col align-c">
+                    <div>
+                        <img src={IconDocument}/>
+                    </div>
+                    <div class="HP_category__item__label">PRODUCT DOCUMENTATION</div>
+                </div>
+            </a> -->
+        </div>
+    </div>
+
+    <div class="HP_more_solution">
+        <div class="HP_more_solution_title">
+            <p>
+                MORE SOLUTIONS
+            </p>
+        </div>
+        <div class="HP_more_solution__most_viewed">
+            <p>
+                Most Viewed
+            </p>
+        </div>
+
+        <div class="HP_more_solution__content d-flex">
+            <div class="HP_more_solution__links">
+                <ul class="d-flex">
+                    <template for:each={articles_data} for:item="i">
+                        <li key={i.Id}><a href={i.url}>{i.Title}</a></li>
+                    </template>
+                </ul>
+            </div>
+            <div class="HP_more_solution__rightbar">
+                <div class="HP_more_solution__rightbar_title colorWhite">
+                    <p>FEATURED ARTICLE</p>
+                </div>
+                <div class="HP_more_solution__rightbar_main colorWhite">
+                    <p>{featureArticle.Title}</p>
+                </div>
+                <div class="HP_more_solution__rightbar_learnmore">
+                    <p><a href={featureArticle.url}>Learn More</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
